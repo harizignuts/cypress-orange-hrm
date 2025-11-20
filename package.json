@@ -1,0 +1,26 @@
+{
+  "name": "cypress-template",
+  "version": "1.0.0",
+  "description": "A Cypress testing template project",
+  "main": "index.js",
+  "engines": {
+    "node": "24",
+    "pnpm": "10"
+  },
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "keywords": [],
+  "author": "Hari Malam",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "cypress": "^15.6.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  }
+}

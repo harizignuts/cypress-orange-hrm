@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    // These settings are for a modern Node.js ESM project
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2022",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "types": ["node"] // This config only needs Node types
+  },
+  // Tell this tsconfig to ONLY apply to your Cypress config file
+  "include": ["cypress.config.ts"]
+}

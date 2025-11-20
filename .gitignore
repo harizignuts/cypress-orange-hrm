@@ -1,0 +1,33 @@
+# Node.js
+# Ignore the massive folder of installed packages
+node_modules/
+pnpm-debug.log
+npm-debug.log*
+yarn-error.log
+
+# Cypress
+# Ignore all test artifacts
+cypress/downloads/
+cypress/screenshots/
+cypress/videos/
+cypress/reports/
+cypress/results/
+
+# Environment Variables
+# NEVER commit your secrets, keys, or passwords!
+.env
+.env.*
+cypress.env.json
+# Allow example environment files
+!.env.example
+
+# IDE & Editor Config
+# Ignore VS Code specific settings
+.vscode/
+
+# Operating System
+# Ignore macOS system files
+.DS_Store
+
+# Log files
+*.log
