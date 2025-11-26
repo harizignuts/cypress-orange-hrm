@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      cypress-file-upload:
+        specifier: ^5.0.8
+        version: 5.0.8(cypress@15.6.0)
       dotenv:
         specifier: ^17.2.3
         version: 17.2.3
@@ -182,6 +185,12 @@ packages:
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
+
+  cypress-file-upload@5.0.8:
+    resolution: {integrity: sha512-+8VzNabRk3zG6x8f8BWArF/xA/W0VK4IZNx3MV0jFWrJS/qKn8eHfa5nU73P9fOQAgwHFJx7zjg4lwOnljMO8g==}
+    engines: {node: '>=8.2.1'}
+    peerDependencies:
+      cypress: '>3.0.0'
 
   cypress@15.6.0:
     resolution: {integrity: sha512-Vqo66GG1vpxZ7H1oDX9umfmzA3nF7Wy80QAc3VjwPREO5zTY4d1xfQFNPpOWleQl9vpdmR2z1liliOcYlRX6rQ==}
@@ -849,6 +858,10 @@ snapshots:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
+
+  cypress-file-upload@5.0.8(cypress@15.6.0):
+    dependencies:
+      cypress: 15.6.0
 
   cypress@15.6.0:
     dependencies:
