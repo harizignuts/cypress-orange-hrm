@@ -85,18 +85,19 @@ export class AdminPage extends BasePage {
     cy.contains(cs.form.inputGroup, "Employee Name", { matchCase: false })
       .find(selectors.addUserForm.employeeNameInput)
       .should("be.visible")
+      .clear()
       .type(`${firstname} ${lastname}`)
       .then(() => {
         cy.wait(`@${intercept.pim.employees.get.alias}`);
         cy.get(selectors.addUserForm.selectAutocompleteDropdown)
           .should("be.visible")
-          .should("not.contain", "searching...")
+          .should("not.contain", "searching...", { matchCase: false })
           .then(() => {
             cy.get(selectors.addUserForm.selectAutocompleteOption)
               .should("be.visible")
               .first()
-              .should("contain", firstname)
-              .should("contain", lastname)
+              .should("contain", firstname, { matchCase: false })
+              .should("contain", lastname, { matchCase: false })
               .click();
           });
       });
