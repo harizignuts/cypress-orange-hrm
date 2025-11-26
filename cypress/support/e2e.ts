@@ -14,4 +14,24 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
+
+Cypress.on("uncaught:exception", (err, runnable) => {
+  // returning false here prevents Cypress from
+  // failing the test when application scripts fail
+  return false;
+});
+
+beforeEach(() => {
+  cy.login();
+});
+
+after(() => {
+  cy.logout();
+  cy.clearCookies();
+  cy.clearLocalStorage();
+  cy.clearAllSessionStorage();
+  cy.clearAllCookies();
+  cy.clearAllLocalStorage();
+  cy.reload();
+});

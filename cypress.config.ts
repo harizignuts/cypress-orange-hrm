@@ -3,7 +3,10 @@ import * as dotenv from "dotenv";
 
 dotenv.config({ path: "./.env" });
 export default defineConfig({
-  env: {},
+  env: {
+    USERNAME: process.env.USERNAME,
+    PASSWORD: process.env.PASSWORD,
+  },
   e2e: {
     video: process.env.CYPRESS_VIDEO === "true" || false,
     baseUrl: process.env.BASE_URL,
